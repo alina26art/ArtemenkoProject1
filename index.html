@@ -10,7 +10,16 @@
       <a href="mailto:artemenko.alina@gmail.com">artemenko.alina@gmail.com</a><br />
       <a href="tel:+40745896512">+4 (074) 589‑6512</a>
     </address>
-    
+    <style>
+      address
+      a[href^='mailto']::before {
+  content: '📧 ';
+}
+
+a[href^='tel']::before {
+  content: '📞 ';
+}
+    </style>
   </head>
 <nav class="menu">
     <ul>
