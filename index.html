@@ -69,11 +69,29 @@ body, html {
 </div>
 
 <div id="Work" class="tabcontent">
-  <center><font size = "5"><b><h3>Work</h3></b></font></center>
+  <center><font size = "5"><b><h3>Work with JAVA</h3></b></font></center>
 <center><b><p3>STEPS TO LEARN</p3></b></center>
 <ul>
-    <i><li>First Task</li>
-    <li>Second Task</li>
+    <i><li>First Task: "What's the time?"</li></i>
+    <br>
+    <script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+</head>
+<body>
+
+<button type="button" onclick="myFunction()">Click me to display Date and Time</button>
+
+<p id="demo"></p>
+    <br>
+    <i><li>Second task: "Print the page!"</li></i>
+<br>
+
+<button onclick="window.print()">Click me to print this page</button>
+<br>
+<br>
     <li>Third Task</li></i>
 </ul>
 <br>
@@ -118,6 +136,19 @@ table {
 
 <div id="Contact" class="tabcontent">
   <b><h3><font size = "6">Contact</font></h3></b>
+  <b><font color = "yellow"><p id="demo1"></p></font></b>
+<script>
+const hour = new Date().getHours(); 
+let greeting;
+
+if (hour < 18 ) {
+  greeting = "Good day!";
+} else {
+  greeting = "Good evening!";
+}
+
+document.getElementById("demo1").innerHTML = greeting;
+</script>
   <p>Get in touch if there's some way I can help!</p>
  <p5 style="color:white;">Contact the author of this page:</p5>
 <address>
