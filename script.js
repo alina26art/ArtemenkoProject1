@@ -12,7 +12,7 @@ function openPage(pageName, elmnt, color) {
     elmnt.style.backgroundColor = color;
 }
 
-// Click on the default tab
+// Click on the default tabb
 document.getElementById("defaultOpen").click();
 
 function myFunction() {
