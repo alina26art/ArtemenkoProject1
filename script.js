@@ -6,10 +6,10 @@ function openTab(evt, tabName) {
     }
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.style.backgroundColor = "#ffffcc"; // Highlight the active tab
+    evt.currentTarget.className += " active";
 }
 
 // Default open tab

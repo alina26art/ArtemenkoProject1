@@ -21,7 +21,7 @@ body {
 
 /* Style tab links */
 .tablink {
-    background-color: #FFFFFF; /* Corrected background color */
+    background-color: #FFFFFF; /* Default background color */
     color: black;
     float: left;
     border: none;
@@ -36,6 +36,11 @@ body {
     background-color: #ffffcc;
 }
 
+/* Active tab link */
+.tablink.active {
+    background-color: #ffffcc; /* Color when active */
+}
+
 /* Specific tab content backgrounds */
 #About {
     background-color: green;
@@ -45,7 +50,6 @@ body {
 }
 #Contact {
     background-color: indigo;
-    display: block; /* Show Contact tab by default */
 }
 
 /* Additional styles */
