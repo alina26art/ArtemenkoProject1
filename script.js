@@ -101,16 +101,3 @@ function checkDivision() {
     } else {
         resultElement.textContent = "The division is incorrect!";
     }
-}
-
-// Display greeting based on the time of day
-const hour = new Date().getHours();
-let greeting;
-
-if (hour < 18) {
-    greeting = "Good day!";
-} else {
-    greeting = "Good evening!";
-}
-
-document.getElementById("demo1").innerHTML = greeting;
