@@ -1,4 +1,4 @@
-function openPage(pageName, elmnt, color) {
+function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -8,16 +8,14 @@ function openPage(pageName, elmnt, color) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].style.backgroundColor = "";
     }
-    document.getElementById(pageName).style.display = "block";
-    elmnt.style.backgroundColor = color;
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.style.backgroundColor = "#ffffcc"; // Highlight the active tab
 }
 
-// Click on the default tab
-document.getElementById("defaultOpen").click();
-
-function myFunction() {
-    document.getElementById("demo").innerHTML = new Date().toLocaleString();
-}
+// Default open tab
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.tablink').click();
+});
 
 function checkSum() {
     const num1 = parseFloat(document.getElementById('num1').value);
