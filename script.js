@@ -2,90 +2,24 @@ function openPage(pageName, elmnt, color) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+        tabcontent[i].style.display = "none";
     }
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].style.backgroundColor = "";
+        tablinks[i].style.backgroundColor = "";
     }
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
-  }
-  
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
-  
-  function myFunction() {
+}
+
+function myFunction() {
     document.getElementById("demo").innerHTML = Date();
-  }
-  
-  function checkSum() {
+}
+
+function checkOperation(id, operator) {
     const num1 = parseFloat(document.getElementById('num1').value);
     const num2 = parseFloat(document.getElementById('num2').value);
     const sum = parseFloat(document.getElementById('sum').value);
-  
     const resultElement = document.getElementById('result');
-  
-    if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
-      resultElement.textContent = "Please enter valid numbers.";
-      return;
-    }
-  
-    const isCorrect = num1 + num2 === sum;
-  
-    if (isCorrect) {
-      resultElement.textContent = "The sum is correct!";
-    } else {
-      resultElement.textContent = "The sum is incorrect!";
-    }
-  }
-  
-  function checkSubtraction() {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
-    const sum = parseFloat(document.getElementById('sum').value);
-  
-    const resultElement = document.getElementById('result');
-  
-    if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
-      resultElement.textContent = "Please enter valid numbers.";
-      return;
-    }
-  
-    const isCorrect = num1 - num2 === sum;
-  
-    if (isCorrect) {
-      resultElement.textContent = "The subtraction is correct!";
-    } else {
-      resultElement.textContent = "The subtraction is incorrect!";
-    }
-  }
-  
-  function checkMultiplication() {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
-    const sum = parseFloat(document.getElementById('sum').value);
-  
-    const resultElement = document.getElementById('result');
-  
-    if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
-      resultElement.textContent = "Please enter valid numbers.";
-      return;
-    }
-  
-    const isCorrect = num1 * num2 === sum;
-  
-    if (isCorrect) {
-      resultElement.textContent = "The multiplication is correct!";
-    } else {
-      resultElement.textContent = "The multiplication is incorrect!";
-    }
-  }
-  
-  function checkDivision() {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
-    const sum = parseFloat(document.getElementById('sum').value);
-  
-   
-  
+
+    if (isNaN(num1) || isNaN(num2)
