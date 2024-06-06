@@ -1,18 +1,17 @@
-/* Apply box-sizing: border-box to all elements */
 * {
     box-sizing: border-box;
 }
 
-/* Set height of body and html to 100% */
+/* Set height of body and the document to 100% */
 body, html {
     height: 100%;
     margin: 0;
-    font-family: Calibri, sans-serif; /* Added fallback font */
+    font-family: Calibri;
 }
 
 /* Style tab links */
 .tablink {
-    background-color: #ffffff; /* Corrected background color to white */
+    background-color: #FFFFFF; /* Corrected background color */
     color: black;
     float: left;
     border: none;
@@ -24,10 +23,10 @@ body, html {
 }
 
 .tablink:hover {
-    background-color: #ffffcc; /* Light yellow on hover */
+    background-color: #ffffcc;
 }
 
-/* Style the tab content and add height: 100% for full page content */
+/* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
     color: white;
     display: none;
@@ -49,6 +48,14 @@ body, html {
 ul {
     list-style-type: none;
 }
+
 button {
     margin: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #FFFFFF; /* Corrected background color */
+    color: #000;
 }

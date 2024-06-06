@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tab Example</title>
+    <title>Tabbed Interface Example</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -62,110 +62,45 @@
 </div>
 
 <div id="Contact" class="tabcontent">
-    <h1>Contact</h1>
-    <p>Contact content...</p>
+    <b><h3><font size="6">Contact</font></h3></b>
+    <b><font color="yellow"><p id="demo1"></p></font></b>
+    <p>Get in touch if there's some way I can help!</p>
+    <p5 style="color:white;">Contact the author of this page:</p5>
+    <address>
+        <i><p6 style="color:white;">artemenko.alina26@gmail.com</p6><br>
+        <p7 style="color:white;">+40757453631</p7></i>
+    </address>
+    <br>
+    <hr>
+    <br>
+    <b><p6>ASK QUESTION</p6></b>
+    <br><br>
+    <form action="" method="get" class="form-example">
+        <div class="form-example">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-example">
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email" required />
+        </div>
+        <div class="form-example">
+            <label for="question">Enter your question: </label>
+            <input type="text" name="question" id="question" required />
+        </div>
+        <div class="form-example">
+            <input type="submit" value="Send" />
+        </div>
+    </form>
 </div>
+
+<footer>
+    <small>
+        Alina Artemenko © 2024 Start in IT. All Rights Reserved.
+    </small>
+</footer>
 
 <script src="script.js"></script>
 
 </body>
-
-<div id="Contact" class="tabcontent">
-  <b><h3><font size = "6">Contact</font></h3></b>
-  <b><font color = "yellow"><p id="demo1"></p></font></b>
-<script>
-const hour = new Date().getHours(); 
-let greeting;
-
-if (hour < 18 ) {
-  greeting = "Good day!";
-} else {
-  greeting = "Good evening!";
-}
-
-document.getElementById("demo1").innerHTML = greeting;
-</script>
-  <p>Get in touch if there's some way I can help!</p>
- <p5 style="color:white;">Contact the author of this page:</p5>
-<address>
-  <i></i><p6 style="color:white;">artemenko.alina26@gmail.com</p6>
-  <br>
-  <p7 style="color:white;">+40757453631</p7></i>
-</address>
- </body>
-
-<br>
-<hr>
-<br>
-<b><p6>ASK QUESTION</p6></b>
-
-<style>
-  p5 {
-    color: #b72626;
-  }
-</style>
-<br>
-<br>
-
-<form action="" method="get" class="form-example">
-    <div class="form-example">
-      <label for="name">Enter your name: </label>
-      <input type="text" name="name" id="name" required />
-    </div>
-    <div class="form-example">
-      <label for="email">Enter your email: </label>
-      <input type="email" name="email" id="email" required />
-    </div>
-    <div class="form-example">
-      <label for="question">Enter your question: </label>
-      <input type="text" name="name" id="name" required />
-    </div>
-    &nbsp;
-    <div class="form-example">
-      <input type="submit" value="Send" />
-    </div>
-</div>
-
-
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-   
-</body>
-</html> 
-
-</body>
- 
-</nav>
-  
-  </form>
-
-<footer>
-<small>
-    Alina Artemenko © 2024 Start in IT. All Rights Reserved.
-</small>
-</footer>
-<style>
-    footer {
-  text-align: center;
-  padding: 5px;
-  background-color: #255255255;
-  color: #000;
-}
-</style>
 </html>
