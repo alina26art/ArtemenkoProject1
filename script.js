@@ -1,54 +1,77 @@
-function openPage(pageName, elmnt, color) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-    }
-    document.getElementById(pageName).style.display = "block";
-    elmnt.style.backgroundColor = color;
+}
 }
 
-function myFunction() {
-    document.getElementById("demo").innerHTML = Date();
-}
-
-function checkOperation(id, operator) {
+function checkSubtraction() {
     const num1 = parseFloat(document.getElementById('num1').value);
     const num2 = parseFloat(document.getElementById('num2').value);
-    const result = parseFloat(document.getElementById(id).value);
+    const sum = parseFloat(document.getElementById('sum').value);
+
     const resultElement = document.getElementById('result');
 
-    if (isNaN(num1) || isNaN(num2) || isNaN(result)) {
+    if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
         resultElement.textContent = "Please enter valid numbers.";
         return;
     }
 
-    let operationResult;
-    switch (operator) {
-        case '+':
-            operationResult = num1 + num2;
-            break;
-        case '-':
-            operationResult = num1 - num2;
-            break;
-        case '*':
-            operationResult = num1 * num2;
-            break;
-        case '/':
-            operationResult = num1 / num2;
-            break;
-        default:
-            resultElement.textContent = "Invalid operator";
-            return;
-    }
+    const isCorrect = num1 - num2 === sum;
 
-    if (operationResult === result) {
-        resultElement.textContent = "The operation is correct!";
+    if (isCorrect) {
+        resultElement.textContent = "The subtraction is correct!";
     } else {
-        resultElement.textContent = "The operation is incorrect!";
+        resultElement.textContent = "The subtraction is incorrect!";
     }
 }
+
+function checkMultiplication() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    const sum = parseFloat(document.getElementById('sum').value);
+
+    const resultElement = document.getElementById('result');
+
+    if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
+        resultElement.textContent = "Please enter valid numbers.";
+        return;
+    }
+
+    const isCorrect = num1 * num2 === sum;
+
+    if (isCorrect) {
+        resultElement.textContent = "The multiplication is correct!";
+    } else {
+        resultElement.textContent = "The multiplication is incorrect!";
+    }
+}
+
+function checkDivision() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    const sum = parseFloat(document.getElementById('sum').value);
+
+    const resultElement = document.getElementById('result');
+
+    if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
+        resultElement.textContent = "Please enter valid numbers.";
+        return;
+    }
+
+    const isCorrect = num1 / num2 === sum;
+
+    if (isCorrect) {
+        resultElement.textContent = "The division is correct!";
+    } else {
+        resultElement.textContent = "The division is incorrect!";
+    }
+}
+
+// Display greeting based on the time of day
+const hour = new Date().getHours();
+let greeting;
+
+if (hour < 18) {
+    greeting = "Good day!";
+} else {
+    greeting = "Good evening!";
+}
+
+document.getElementById("demo1").innerHTML = greeting;
