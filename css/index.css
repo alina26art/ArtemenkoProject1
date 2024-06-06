@@ -55,7 +55,9 @@ button {
 
 footer {
     text-align: center;
-    padding: 5px;
-    background-color: #FFFFFF; /* Corrected background color */
-    color: #000;
+    padding: 10px;
+    background-color: #f1f1f1; /* Optional: Add background color for better visibility */
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
