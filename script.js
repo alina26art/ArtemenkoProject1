@@ -1,114 +1,91 @@
-function openTab(evt, tabName) {
+function openPage(pageName, elmnt, color) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+      tabcontent[i].style.display = "none";
     }
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      tablinks[i].style.backgroundColor = "";
     }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Default open tab
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.tablink').click();
-});
-
-function checkSum() {
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  
+  function myFunction() {
+    document.getElementById("demo").innerHTML = Date();
+  }
+  
+  function checkSum() {
     const num1 = parseFloat(document.getElementById('num1').value);
     const num2 = parseFloat(document.getElementById('num2').value);
     const sum = parseFloat(document.getElementById('sum').value);
-
+  
     const resultElement = document.getElementById('result');
-
+  
     if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
-        resultElement.textContent = "Please enter valid numbers.";
-        return;
+      resultElement.textContent = "Please enter valid numbers.";
+      return;
     }
-
+  
     const isCorrect = num1 + num2 === sum;
-
+  
     if (isCorrect) {
-        resultElement.textContent = "The sum is correct!";
+      resultElement.textContent = "The sum is correct!";
     } else {
-        resultElement.textContent = "The sum is incorrect!";
+      resultElement.textContent = "The sum is incorrect!";
     }
-}
-
-function checkSubtraction() {
+  }
+  
+  function checkSubtraction() {
     const num1 = parseFloat(document.getElementById('num1').value);
     const num2 = parseFloat(document.getElementById('num2').value);
     const sum = parseFloat(document.getElementById('sum').value);
-
+  
     const resultElement = document.getElementById('result');
-
+  
     if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
-        resultElement.textContent = "Please enter valid numbers.";
-        return;
+      resultElement.textContent = "Please enter valid numbers.";
+      return;
     }
-
+  
     const isCorrect = num1 - num2 === sum;
-
+  
     if (isCorrect) {
-        resultElement.textContent = "The subtraction is correct!";
+      resultElement.textContent = "The subtraction is correct!";
     } else {
-        resultElement.textContent = "The subtraction is incorrect!";
+      resultElement.textContent = "The subtraction is incorrect!";
     }
-}
-
-function checkMultiplication() {
+  }
+  
+  function checkMultiplication() {
     const num1 = parseFloat(document.getElementById('num1').value);
     const num2 = parseFloat(document.getElementById('num2').value);
     const sum = parseFloat(document.getElementById('sum').value);
-
+  
     const resultElement = document.getElementById('result');
-
+  
     if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
-        resultElement.textContent = "Please enter valid numbers.";
-        return;
+      resultElement.textContent = "Please enter valid numbers.";
+      return;
     }
-
+  
     const isCorrect = num1 * num2 === sum;
-
+  
     if (isCorrect) {
-        resultElement.textContent = "The multiplication is correct!";
+      resultElement.textContent = "The multiplication is correct!";
     } else {
-        resultElement.textContent = "The multiplication is incorrect!";
+      resultElement.textContent = "The multiplication is incorrect!";
     }
-}
-
-function checkDivision() {
+  }
+  
+  function checkDivision() {
     const num1 = parseFloat(document.getElementById('num1').value);
     const num2 = parseFloat(document.getElementById('num2').value);
     const sum = parseFloat(document.getElementById('sum').value);
-
-    const resultElement = document.getElementById('result');
-
-    if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
-        resultElement.textContent = "Please enter valid numbers.";
-        return;
-    }
-
-    const isCorrect = num1 / num2 === sum;
-
-    if (isCorrect) {
-        resultElement.textContent = "The division is correct!";
-    } else {
-        resultElement.textContent = "The division is incorrect!";
-    }
-}
-
-// Display greeting based on the time of day
-const hour = new Date().getHours();
-let greeting;
-
-if (hour < 18) {
-    greeting = "Good day!";
-} else {
-    greeting = "Good evening!";
-}
-
-document.getElementById("demo1").innerHTML = greeting;
+  
+   
+  
