@@ -1,4 +1,41 @@
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
 }
+
+// Default open tab
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.tablink').click();
+});
+
+function checkSum() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    const sum = parseFloat(document.getElementById('sum').value);
+
+    const resultElement = document.getElementById('result');
+
+    if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
+        resultElement.textContent = "Please enter valid numbers.";
+        return;
+    }
+
+    const isCorrect = num1 + num2 === sum;
+
+    if (isCorrect) {
+        resultElement.textContent = "The sum is correct!";
+    } else {
+        resultElement.textContent = "The sum is incorrect!";
+    }
 }
 
 function checkSubtraction() {
