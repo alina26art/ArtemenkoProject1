@@ -1,4 +1,4 @@
-function openTab(evt, tabName) {
+function openPage(pageName, elmnt, color) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -6,16 +6,18 @@ function openTab(evt, tabName) {
     }
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].style.backgroundColor = "";
     }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
 }
 
-// Default open tab
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.tablink').click();
-});
+// Click on the default tab
+document.getElementById("defaultOpen").click();
+
+function myFunction() {
+    document.getElementById("demo").innerHTML = new Date().toLocaleString();
+}
 
 function checkSum() {
     const num1 = parseFloat(document.getElementById('num1').value);
