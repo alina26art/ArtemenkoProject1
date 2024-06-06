@@ -24,7 +24,7 @@
                 <path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z"/>
             </svg>
         </button>
-        <p2><font size="2"><i>started on 28 april 2024</i></font></p2>
+        <p2><font size="2"><i>started on 28 April 2024</i></font></p2>
         <br><br>
         <hr>
         <br>
@@ -35,8 +35,30 @@
 </div>
 
 <div id="Work" class="tabcontent">
-    <h1>Work</h1>
-    <p>Work content...</p>
+    <center><font size="5"><b><h3>Work with JAVA</h3></b></font></center>
+    <center><b><p3>STEPS TO LEARN</p3></b></center>
+    <ul>
+        <i><li>First Task: "What's the time?"</li></i>
+        <br>
+        <button type="button" onclick="myFunction()">Click me to display Date and Time</button>
+        <p id="demo"></p>
+        <br>
+        <i><li>Second task: "Print the page!"</li></i>
+        <br>
+        <button onclick="window.print()">Click me to print this page</button>
+        <br><br>
+        <i><li>Third Task: "Calculation Checker"</li></i>
+        <br>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <input type="number" id="sum" placeholder="Enter result">
+        <br>
+        <button onclick="checkSum()">Check Sum</button>
+        <button onclick="checkSubtraction()">Check Subtraction</button>
+        <button onclick="checkMultiplication()">Check Multiplication</button>
+        <button onclick="checkDivision()">Check Division</button>
+        <p id="result"></p>
+    </ul>
 </div>
 
 <div id="Contact" class="tabcontent">
@@ -47,136 +69,6 @@
 <script src="script.js"></script>
 
 </body>
-
-<div id="Work" class="tabcontent">
-  <center><font size = "5"><b><h3>Work with JAVA</h3></b></font></center>
-<center><b><p3>STEPS TO LEARN</p3></b></center>
-<ul>
-    <i><li>First Task: "What's the time?"</li></i>
-    <br>
-    <script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = Date();
-}
-</script>
-</head>
-<body>
-
-<button type="button" onclick="myFunction()">Click me to display Date and Time</button>
-
-<p id="demo"></p>
-    <br>
-    <i><li>Second task: "Print the page!"</li></i>
-<br>
-
-<button onclick="window.print()">Click me to print this page</button>
-<br>
-<br>
-     <i><li>Third Task: "Calculation Checker"</li></i>
-     <br>
-        <body>
-
-<input type="number" id="num1" placeholder="Enter first number">
-    <input type="number" id="num2" placeholder="Enter second number">
-    <input type="number" id="sum" placeholder="Enter result">
-<br>
-    <button onclick="checkSum()">Check Sum</button>
-    <button onclick="checkSubtraction()">Check Subtraction</button>
-    <button onclick="checkMultiplication()">Check Multiplication</button>
-    <button onclick="checkDivision()">Check Division</button>
-
-
-    <p id="result"></p>
-
-    <script>
-        function checkSum() {
-            const num1 = parseFloat(document.getElementById('num1').value);
-            const num2 = parseFloat(document.getElementById('num2').value);
-            const sum = parseFloat(document.getElementById('sum').value);
-
-            const resultElement = document.getElementById('result');
-
-            if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
-                resultElement.textContent = "Please enter valid numbers.";
-                return;
-            }
-
-            const isCorrect = num1 + num2 === sum;
-
-            if (isCorrect) {
-                resultElement.textContent = "The sum is correct!";
-            } else {
-                resultElement.textContent = "The sum is incorrect!";
-            }
-        }
-        
-    function checkSubtraction() {
-            const num1 = parseFloat(document.getElementById('num1').value);
-            const num2 = parseFloat(document.getElementById('num2').value);
-            const sum = parseFloat(document.getElementById('sum').value);
-
-            const resultElement = document.getElementById('result');
-
-            if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
-                resultElement.textContent = "Please enter valid numbers.";
-                return;
-            }
-
-            const isCorrect = num1 - num2 === sum;
-
-            if (isCorrect) {
-                resultElement.textContent = "The subtraction is correct!";
-            } else {
-                resultElement.textContent = "The subtraction is incorrect!";
-            }
-        }
-        
-           function checkMultiplication() {
-            const num1 = parseFloat(document.getElementById('num1').value);
-            const num2 = parseFloat(document.getElementById('num2').value);
-            const sum = parseFloat(document.getElementById('sum').value);
-
-            const resultElement = document.getElementById('result');
-
-            if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
-                resultElement.textContent = "Please enter valid numbers.";
-                return;
-            }
-
-            const isCorrect = num1 * num2 === sum;
-
-            if (isCorrect) {
-                resultElement.textContent = "The multiplication is correct!";
-            } else {
-                resultElement.textContent = "The multiplication is incorrect!";
-            }
-        }
-        
-          function checkDivision() {
-            const num1 = parseFloat(document.getElementById('num1').value);
-            const num2 = parseFloat(document.getElementById('num2').value);
-            const sum = parseFloat(document.getElementById('sum').value);
-
-            const resultElement = document.getElementById('result');
-
-            if (isNaN(num1) || isNaN(num2) || isNaN(sum)) {
-                resultElement.textContent = "Please enter valid numbers.";
-                return;
-            }
-
-            const isCorrect = num1 / num2 === sum;
-
-            if (isCorrect) {
-                resultElement.textContent = "The division is correct!";
-            } else {
-                resultElement.textContent = "The division is incorrect!";
-            }
-        }
-    </script>
-
-  </body>
-
-</div>
 
 <div id="Contact" class="tabcontent">
   <b><h3><font size = "6">Contact</font></h3></b>
