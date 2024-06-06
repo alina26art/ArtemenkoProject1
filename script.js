@@ -93,7 +93,7 @@ function checkDivision() {
         resultElement.textContent = "Please enter valid numbers.";
         return;
     }
-
+}
     const isCorrect = num1 / num2 === sum;
 
     if (isCorrect) {
